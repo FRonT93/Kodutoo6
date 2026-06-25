@@ -97,6 +97,8 @@ def import_geojson():
 
 df = import_data()
 gdf = import_geojson()
+st.write("GeoJSON veerud:")
+st.write(gdf.columns)
 
 st.write("Andmete eelvaade:")
 st.write(df.head())
