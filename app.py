@@ -107,8 +107,8 @@ valitud_aasta = st.sidebar.selectbox("Vali aasta", aastad)
 df_aasta = df[df["Aasta"] == valitud_aasta]
 
 # Kui sama maakonna kohta on mitu rida, liidame väärtused kokku
+df_aasta["Loomulik iive"] = df_aasta["Mehed Loomulik iive"] + df_aasta["Naised Loomulik iive"]
 df_aasta = df_aasta.groupby("Maakond", as_index=False)["Loomulik iive"].sum()
-
 # Ühendame kaardiandmed ja Statistikaameti andmed
 kaart = gdf.merge(df_aasta, on="Maakond", how="left")
 
