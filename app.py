@@ -11,7 +11,63 @@ st.title("Loomulik iive Eesti maakondades")
 STATISTIKAAMETI_API_URL = "https://andmed.stat.ee/api/v1/et/stat/RV032"
 
 JSON_PAYLOAD_STR = """ 
-SIIA KLEEBI OMA JSON TÄPSELT NAGU SUL OLI
+"query": [
+    {
+      "code": "Aasta",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ]
+      }
+    },
+    {
+      "code": "Maakond",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "39",
+          "44",
+          "49",
+          "51",
+          "57",
+          "59",
+          "65",
+          "67",
+          "70",
+          "74",
+          "78",
+          "82",
+          "84",
+          "86",
+          "37"
+        ]
+      }
+    },
+    {
+      "code": "Sugu",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "2",
+          "3"
+        ]
+      }
+    }
+  ],
+  "response": {
+    "format": "csv"
+  }
+}
 """
 
 geojson = "maakonnad.geojson"
