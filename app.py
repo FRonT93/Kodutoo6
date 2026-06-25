@@ -10,7 +10,7 @@ st.title("Loomulik iive Eesti maakondades")
 
 STATISTIKAAMETI_API_URL = "https://andmed.stat.ee/api/v1/et/stat/RV032"
 
-JSON_PAYLOAD_STR = """ 
+JSON_PAYLOAD_STR = """ {
 "query": [
     {
       "code": "Aasta",
